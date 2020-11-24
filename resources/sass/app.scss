@@ -1,0 +1,36 @@
+/*
+Website Name: My Bookmarks
+Description: Create, find and share your bookmarks!
+Website URI: https://www.mybookmarks.co.uk
+Author: Dream Sites Ltd
+Author URI: https://www.dreamsites.agency/
+Version: 2.0.0
+Tags: bookmarks, URLs
+License:
+License URI:
+*/
+@import 'reset';
+
+@import 'mdc';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+
+@import "style";
+@import 'cardcatalog';
+//@import 'ripple';
+
+// Main
+@import 'mdl';
+
+// Main
+@import 'main';
+
+// Responsive and Grid Layouts
+@import 'responsive';
