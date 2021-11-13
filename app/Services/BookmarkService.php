@@ -154,8 +154,6 @@ class BookmarkService
                 $data['description'] = $link->meta_description;
             }
 
-            $data['link_id'] = $this->linkService->updateLink($data, null, $createSite);
-
         } else {
             //create link
 
@@ -268,8 +266,6 @@ class BookmarkService
             ];
 
             if ($create) {
-                $validation['link_id'] = 'required|integer';
-            } elseif (isset($data['link_id'])) {
                 $validation['link_id'] = 'required|integer';
             }
 

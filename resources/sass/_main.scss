@@ -45,7 +45,6 @@ body {
 .mdc-card-wrapper__text-section {
     padding-left: 16px;
     padding-right: 16px;
-
     + .mdc-card-wrapper__text-section {
         padding-top: 18px;
     }
@@ -103,42 +102,9 @@ span.logo {
 }
 
 div.paragraph, md-content {
-    margin: 20px 0;
+    margin:20px 0;
 }
 
 .full-width {
     max-width: none;
-}
-
-.demo-card {
-    width: auto;
-    max-width: 400px;
-}
-
-.bookmark_content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, max-content));
-    justify-content: center;
-    grid-gap: 1rem;
-}
-
-a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent {
-    margin: 5px 0;
-}
-
-.mobile_scroll {
-    display: none;
-}
-
-.mdl-cell.mdl-cell--6-col.center {
-    margin: 0 auto;
-}
-
-.select.field {
-    width: 80%;
-    float: left;
-}
-
-button.mdc-icon-button.material-icons.mdc-card__action.mdc-card__action--icon--unbounded {
-    float: left;
 }

@@ -54,6 +54,11 @@
         @endauth
     @endif
 
+    @guest
+        <p></p>
+        <p>Please <a href="{{ route('register') }}">register</a> if you want to import this category into your bookmarks.</p>
+    @endguest
+
     <br/>
     <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent copy-button" href="{{ url('/public') }}/{{ $username }}" class="button is-success">{{ $username }}{{ __(' Bookmarks') }}</a>
 

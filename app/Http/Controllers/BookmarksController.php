@@ -470,4 +470,50 @@ class BookmarksController extends Controller
 
         return redirect('/bookmarks');
     }
+
+    public function searchVue(Request $request)
+    {
+        $data['status'] = ['live'];
+
+        $bookmarks = $this->bookmarkService->fetchBookmarks(1, $data);
+
+            $count = 0;
+            if ($bookmarks) {
+                $show_trash = $data['status'] === ['trash'] ? 'trash' : 'live';
+                $output = [];
+                foreach ($bookmarks as $bookmark) {
+                    $site_logo = strip_tags($bookmark->link->site->logo);
+                    $output[$count]['id'] = $bookmark->id;
+                    $output[$count]['bookmark_id'] = $bookmark->id;
+                    $output[$count]['site_logo'] = $site_logo;
+                    $output[$count]['image'] = strip_tags($bookmark->link->og_image) ?? strip_tags($site_logo);
+                    $output[$count]['alt_text'] = strip_tags($bookmark->link->site->rootLink->title);
+                    $output[$count]['created_at'] = date_format($bookmark->created_at, "d-M-Y H:i");
+                    $og_title = strip_tags($bookmark->link->og_title) ?? strip_tags($bookmark->link->title);
+                    $output[$count]['og_title'] = $og_title;
+                    $og_desc = strip_tags($bookmark->link->og_description) ?? strip_tags($bookmark->link->meta_description);
+                    $output[$count]['og_desc'] = $og_desc;
+                    $your_title = strip_tags($bookmark->title) ?? strip_tags($bookmark->link->og_title);
+                    $output[$count]['your_title'] = $your_title;
+                    $your_desc = strip_tags($bookmark->description) ?? strip_tags($bookmark->link->meta_description);
+                    $output[$count]['your_desc'] = $your_desc;
+                    $output[$count]['url'] = strip_tags($bookmark->link->url);
+                    $your_title = preg_replace('/[[:^print:]]/', '', $your_title);
+                    $your_desc = preg_replace('/[[:^print:]]/', '', $your_desc);
+                    $og_title = preg_replace('/[[:^print:]]/', '', $og_title);
+                    $og_desc = preg_replace('/[[:^print:]]/', '', $og_desc);
+                    $output[$count]['short_title'] = strlen($your_title) > 55 ? substr($your_title, 0, 55) . '...' : $your_title;
+                    $output[$count]['short_desc'] = strlen($your_desc) > 90 ? substr($your_desc, 0, 90) . '...' : $your_desc;
+                    $output[$count]['short_og_title'] = strlen($og_title) > 55 ? substr($og_title, 0, 55) . '...' : $og_title;
+                    $output[$count]['short_og_desc'] = strlen($og_desc) > 90 ? substr($og_desc, 0, 90) . '...' : $og_desc;
+//                    $output[$count]['short_title'] = '';
+//                    $output[$count]['short_desc'] = '';
+//                    $output[$count]['short_og_title'] = '';
+//                    $output[$count]['short_og_desc'] = '';
+                    $output[$count]['edit_url'] = '/bookmarks';
+                    $count++;
+                }
+            }
+        return response()->json($output, Response::HTTP_OK);
+    }
 }

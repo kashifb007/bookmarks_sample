@@ -78,7 +78,7 @@
         <div class="paragraph">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <input class="mdl-textfield__input @error('title') is-invalid @enderror"
-                       id="title" type="text" name="title" value="{{ $category->title }}"/>
+                       id="title" type="text" name="title" value="{{ $cat->title }}"/>
                 <label class="mdl-textfield__label" for="title">{{ __('Title') }}</label>
 
                 @error('title')
@@ -92,7 +92,7 @@
         <div class="paragraph">
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                 <textarea class="mdl-textfield__input" type="text" rows="3"
-                          name="description" id="description">{{ $category->description }}</textarea>
+                          name="description" id="description">{{ $cat->description }}</textarea>
                 <label class="mdl-textfield__label" for="description">{{ __('Description') }}</label>
 
                 @error('description')

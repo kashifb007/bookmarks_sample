@@ -73,9 +73,7 @@ class PublicController extends Controller
             'user_id' => $id,
             'username' => $username,
             'treeData' => $treeData,
-            'fullWidth' => true,
-            'showSites' => false,
-            'showFilter' => true,
+            'fullWidth' => true
         ]);
     }
 
@@ -140,9 +138,7 @@ class PublicController extends Controller
             'tagz' => $tagz_string,
             'showImport' => $showImport,
             'treeData' => $treeData,
-            'fullWidth' => true,
-            'showSites' => false,
-            'showFilter' => true,
+            'fullWidth' => true
         ]);
 
     }

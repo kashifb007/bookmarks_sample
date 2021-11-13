@@ -1,6 +1,18 @@
+/*
+Website Name: My Bookmarks
+Description: Create, find and share your bookmarks!
+Website URI: https://www.mybookmarks.co.uk
+Author: Dream Sites Ltd
+Author URI: https://www.dreamsites.agency/
+Version: 1.0.0
+Tags: bookmarks, URLs
+License:
+License URI:
+*/
+
 /* ==========================================================================
    TABLE OF CONTENTS
-
+   
     01. Body
     02. Colours
     03. Header
@@ -32,33 +44,40 @@
     29. Helper classes
     30. Print styles
     31. Misc. MB
-
+   
    ========================================================================== */
-/* ==========================================================================
+
+   /* ==========================================================================
    01. Body
    ========================================================================== */
 body {
-    margin: 0;
-    color: rgba(0, 0, 0, 0.87);
-    font-family: "Helvetica", "Arial", sans-serif;
+  margin: 0;  
+  color: rgba(0,0,0,.87);
+  font-family: "Helvetica","Arial",sans-serif;
 }
-a img {
-    border: 0px;
+
+a img{
+  border: 0px;
 }
+
 ::-moz-selection {
-    background-color: #6ab344;
-    color: #fff;
+  background-color: #6ab344;
+  color: #fff;
 }
+
 ::selection {
-    background-color: #6ab344;
-    color: #fff;
+  background-color: #6ab344;
+  color: #fff;
 }
+
 .mdl-textfield--expandable {
-    width: auto;
+  width: auto;
 }
-img.img-responsive {
-    width: 100%;
+
+img.img-responsive{
+  width:100%;
 }
+
 .mdl-layout--large-screen-only .mdl-navigation__link {
     display: inline-block;
     height: 60px;
@@ -66,45 +85,55 @@ img.img-responsive {
     background-color: transparent !important;
     border-bottom: 4px solid transparent;
 }
+
 .mdl-layout--large-screen-only .mdl-navigation__link:hover {
     border-bottom: 4px solid #8bc34a;
 }
+
 .mdl-layout--large-screen-only .mdl-navigation__link {
     color: #757575;
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
 }
+
 .mdl-layout--large-screen-only .mdl-navigation__link:hover {
     border-bottom: 4px solid #8bc34a;
 }
+
 header.mdl-layout__header {
-    overflow: visible;
-    background-color: white;
+  overflow: visible;
+  background-color: white;
 }
+
 header.mdl-layout__header.is-casting-shadow {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
+
 .mdl-layout__header .mdl-layout__drawer-button {
     background: transparent;
     color: #767777;
 }
+
 .mdl-layout__header {
-    box-shadow: none;
+  box-shadow: none;
 }
-h4,
-h4 > a {
-    color: #8bc34a;
-    text-decoration: none;
+
+h4, h4 > a {
+  color: #8bc34a;
+  text-decoration: none;
 }
+
 .mdl-navigation .material-icons {
     color: #767777 !important;
 }
-.mdl-layout__header-row > * {
+
+.mdl-layout__header-row>* {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
 }
+
 .mdl-textfield {
     position: relative;
     font-size: 16px;
@@ -115,6 +144,7 @@ h4 > a {
     margin: 0;
     padding: 20px 0;
 }
+
 .android-search-box {
     -webkit-order: 2;
     -ms-flex-order: 2;
@@ -122,140 +152,93 @@ h4 > a {
     margin-left: 16px;
     margin-right: 16px;
 }
+
 .android-search-box .mdl-textfield__input {
     color: rgba(0, 0, 0, 0.87);
 }
-h1,
-h2,
-h3 {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    text-align: center;
+
+h1, h2, h3 {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
 }
+
 h1 {
-    line-height: 1;
-    color: #767777;
-    font-weight: 500;
-    font-size: 60px;
-    padding-top: 60px;
-    text-transform: lowercase;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+  font-size: 60px;
+  padding-top: 60px;
+  text-transform: lowercase;
 }
+
 h2 {
-    opacity: 0.54;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 40px;
+  opacity: .54;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
 }
+
 h3 {
-    line-height: 1;
-    color: #767777;
-    font-weight: 500;
-    font-size: 21px;
-    padding-top: 24px;
+  line-height: 1;
+  color: #767777;
+  font-weight: 500;
+  font-size: 21px;
+  padding-top: 24px;
 }
-.mdl-button--raised[disabled][disabled],
-.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
+
+.mdl-button--raised[disabled][disabled], .mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
     cursor: not-allowed;
 }
+
 form#login {
     text-align: center;
 }
+
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 button.mdc-button {
-    display: block;
-    margin: 10px auto;
+  display: block;
+  margin: 10px auto;
 }
+
 div#remember_me {
     margin: 10px 0;
 }
+
 .invalid-feedback > strong {
-    color: red;
+  color: red;
 }
+
 .mdl-menu.mdl-js-menu a {
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .text-field-container {
     margin: 10px 0;
 }
-.android-search-box .mdl-textfield__input {
-    color: rgba(0, 0, 0, 0.87);
-}
-h1,
-h2,
-h3 {
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-    text-align: center;
-}
-h1 {
-    line-height: 1;
-    color: #767777;
-    font-weight: 500;
-    font-size: 60px;
-    padding-top: 60px;
-    text-transform: lowercase;
-}
-h2 {
-    opacity: 0.54;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 40px;
-}
-h3 {
-    line-height: 1;
-    color: #767777;
-    font-weight: 500;
-    font-size: 21px;
-    padding-top: 24px;
-}
-.mdl-button--raised[disabled][disabled],
-.mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
-    cursor: not-allowed;
-}
-form#login {
-    text-align: center;
-}
-a:hover {
-    text-decoration: none;
-}
-button.mdc-button {
-    display: block;
-    margin: 10px auto;
-}
-div#remember_me {
-    margin: 10px 0;
-}
-.invalid-feedback > strong {
-    color: red;
-}
-.mdl-menu.mdl-js-menu a {
-    text-decoration: none;
-}
-.text-field-container {
-    margin: 10px 0;
-}
-form#register_form,
-form#category_form,
-form#tag_form {
+
+form#register_form, form#category_form, form#tag_form {
     text-align: center;
 }
 .mdc-button--raised:disabled {
-    cursor: not-allowed;
-    pointer-events: all;
+  cursor: not-allowed;
+  pointer-events: all;
 }
 .mdc-button--raised:disabled:hover {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(0, 0, 0, 0.12);
-    background-color: rgba(0, 0, 0, 0.12) !important;
-    color: rgba(0, 0, 0, 0.37);
+  box-shadow: 0 0 0 0 rgba(0,0,0,.2), 0 0 0 0 rgba(0,0,0,.14), 0 0 0 0 rgba(0,0,0,.12);
+  background-color: rgba(0,0,0,.12) !important;
+  color: rgba(0,0,0,.37);
 }
-table#list thead tr th {
+
+table#list
+{
+  thead tr th {
     font-weight: bold;
     padding: 10px;
+  }  
+  tbody tr td {
+  padding: 10px;
 }
-table#list tbody tr td {
-    padding: 10px;
-}
-.select.field {
-    width: 80%;
-    float: left;
 }
